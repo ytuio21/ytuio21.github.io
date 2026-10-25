@@ -1,0 +1,18 @@
+# 构建产物，由 GitHub Actions 生成
+docs/
+
+# 依赖（本项目零依赖，留着以防以后加工具）
+node_modules/
+
+# 系统与编辑器
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+
+# 本地草稿
+_drafts/
+
+# 本地截图/调试文件
+.shots/

@@ -1,0 +1,12 @@
+{
+  "name": "ytuio21-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "AI 时代的求职实验记录：个人时间轴与项目文档站",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "dev": "node src/build.mjs && python3 -m http.server 4321 --directory docs",
+    "clean": "rm -rf docs"
+  }
+}
