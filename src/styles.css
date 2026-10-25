@@ -503,6 +503,7 @@ img {
 /* ---------- 示例标记 ---------- */
 
 .demo-badge {
+  display: inline-block;
   font-size: 0.6875rem;
   padding: 1px 7px;
   border-radius: 999px;
@@ -510,6 +511,10 @@ img {
   border: 1px dashed var(--muted);
   color: var(--muted);
   letter-spacing: 0.02em;
+}
+
+.card-kicker .demo-badge {
+  margin-left: 8px;
 }
 
 .demo-banner {

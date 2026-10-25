@@ -16,3 +16,7 @@ _drafts/
 
 # 本地截图/调试文件
 .shots/
+
+# 无头浏览器缓存与截图
+.chrome/
+shots/

@@ -153,10 +153,6 @@ function isDemo(item) {
   return String(item.demo) === 'true';
 }
 
-function demoBadge(item) {
-  return isDemo(item) ? '<span class="demo-badge">示例</span>' : '';
-}
-
 function demoBanner(item) {
   return isDemo(item)
     ? '<div class="demo-banner">这是一段示例内容，正式发布前请替换成真实经历。</div>'
@@ -168,7 +164,6 @@ function timelineItem(item) {
   <div class="tl-head">
     <span class="tl-date mono">${fmtDate(item.date)}</span>
     ${statusBadge(item.status)}
-    ${demoBadge(item)}
   </div>
   <h3><a href="/timeline/${item.slug}.html">${esc(item.title)}</a></h3>
   ${item.summary ? `<p class="tl-summary">${esc(item.summary)}</p>` : ''}
@@ -178,7 +173,7 @@ function timelineItem(item) {
 
 function noteCard(note) {
   return `<a class="card" href="/notes/${note.slug}.html">
-  <div class="card-kicker"><span class="mono">${fmtDate(note.date)}</span>${note.category ? ` · ${esc(note.category)}` : ''}${demoBadge(note)}</div>
+  <div class="card-kicker"><span class="mono">${fmtDate(note.date)}</span>${note.category ? ` · ${esc(note.category)}` : ''}</div>
   <h3>${esc(note.title)}</h3>
   ${note.summary ? `<p>${esc(note.summary)}</p>` : ''}
   ${tagChips(note.tags)}
